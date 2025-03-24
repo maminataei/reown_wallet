@@ -18,7 +18,7 @@ export type EIP155Chain = {
   smartAccountEnabled?: boolean;
 };
 const blockchainApiRpc = (chainId: number) => {
-  return `https://rpc.walletconnect.org/v1?chainId=eip155:${chainId}&projectId=${process.env.NEXT_PUBLIC_PROJECT_ID}`;
+  return `https://rpc.walletconnect.org/v1?chainId=eip155:${chainId}&projectId=${import.meta.env.VITE_PUBLIC_PROJECT_ID}`;
 };
 /**
  * Chains
